@@ -23,8 +23,6 @@ export const SidebarChecker = () => {
   useEffect(() => {
     let element = document.querySelector('.nextra-sidebar-container');
     element.className = 'hidden';
-    let bob = document.querySelector('html');
-    bob.className = 'dark';
   }, [])
   return (<></>);
 }

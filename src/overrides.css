@@ -4,8 +4,17 @@
 }
 
 :is(html[class~=dark] .nextra-nav-container-blur, html[class~=dark] .nextra-nav-container-blur) {
-    background: transparent !important;
+    background: #030712 !important;
 }
+
+:is(html[class~=dark] html) {
+    background: #030712 !important;
+}
+
+html.dark {
+    background-color: #030712 !important;
+}
+
 
 
 .hidden {
@@ -50,3 +59,4 @@ media-outlet {
 article.nextra-body-typesetting-article h2 {
     margin-top: 8rem;
 }
+
