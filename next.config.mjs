@@ -63,7 +63,7 @@ const permanentRedirects = [
   // Migration 2023-07
   ["/observability", "/docs/tracing"],
   ["/docs/debugging-ui", "/docs/tracing"],
-  ['/', '/posts'],
+  ['/', '/docs'],
   // Migration 2023-08-01
   // deployment
   // ["/docs/local", "/docs/deployment/local"],
