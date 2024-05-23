@@ -4,37 +4,18 @@
 }
 
 :is(html[class~=dark] .nextra-nav-container-blur, html[class~=dark] .nextra-nav-container-blur) {
-    background: transparent !important;
+    background: #030712 !important;
 }
 
-#docs-feedback {
-    margin: 0;
-    padding: 0;
+:is(html[class~=dark] html) {
+    background: #030712 !important;
 }
 
-#__next {
-    max-height: 100vh;
-    overflow-y: hidden;
+html.dark {
+    background-color: #030712 !important;
 }
 
-.md\:h-screen {
-    height: auto;
-}
 
-main {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: 0 auto;
-}
-
-.nextra-toc {
-    display: none;
-}
-
-.nextra-sidebar-container {
-    display: none;
-}
 
 .hidden {
     display: none;
@@ -78,3 +59,4 @@ media-outlet {
 article.nextra-body-typesetting-article h2 {
     margin-top: 8rem;
 }
+
