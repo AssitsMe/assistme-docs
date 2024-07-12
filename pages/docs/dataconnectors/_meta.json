@@ -2,5 +2,6 @@
   "intro": "What is data connector",
   "google": "Google Drive",
   "sharepoint": "Sharepoint",
+  "confluence": "Confluence",
   "supported-file-formats": "Supported File Formats"
 }
