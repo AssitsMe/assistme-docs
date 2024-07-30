@@ -3,5 +3,6 @@
   "google": "Google Drive",
   "sharepoint": "Sharepoint",
   "confluence": "Confluence",
+  "zendesk": "Zendesk",
   "supported-file-formats": "Supported File Formats"
 }
