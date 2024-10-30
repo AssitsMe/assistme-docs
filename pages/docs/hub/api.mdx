@@ -1,0 +1,77 @@
+# API Inbox
+
+This page guides you through setting up the API inbox
+
+## How to setup a API channel?
+
+To create and configure an API channel inbox in our service installations, follow the step described below.
+
+###### Step 1. Go to Engagement Hub → Settings → Inboxes → “Add Inbox”.
+
+<Frame>![telegram Step 1](/images/hub/telegramStep1.png)</Frame>
+
+###### Step 2. Click on the "API" icon.
+
+<Frame>![telegram Step 1](/images/hub/api.png)</Frame>
+
+###### Step 3. Provide a name for the channel and a callback URL. Here is an example:
+
+<Frame>![telegram Step 1](/images/hub/api2.png)</Frame>
+
+###### Step 4. "Add operators" to your API inbox.
+
+<Frame>![telegram Step 2](/images/hub/telegramStep4.png)</Frame>
+
+###### Step 5. "Add agents" to your API inbox.
+
+<Frame>![telegram Step 2](/images/hub/telegramStep5.png)</Frame>
+
+The inbox setup is complete.
+
+### Receive messages using callback URL
+When a new message is created in the API channel, you will get a POST request to the Callback URL specified while creating the API channel. The payload would look like this.
+
+<Tabs items={["Response", "POST request"]}>
+  <Tab>
+  ```
+  {
+    {
+      "conversationId": "conversation-id",
+      "messages": [
+        {
+          "id": 1,
+          "content": "Where I can buy shoes in New York?",
+          "messageType": "incoming",
+          "AIgenerated": false
+        },
+        {
+          "id": 2,
+          "content": "New York City offers a variety of great shoe stores depending on your style and preferences.",
+          "messageType": "outgoing",
+          "AIgenerated": true
+        }
+      ]
+    }
+  }
+  ```
+  </Tab>
+
+   <Tab>
+    ```
+          await fetch(`https://deveh.assistme.chat/api/v1/webhooks/trigger/${inboxId}`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'x-private-key': 'my-private-key'
+            },
+            body: JSON.stringify({
+              question: "Where I can buy shoes in New York?",
+              user: {
+                id: "user-id",
+                name: "user-name"
+              }
+            })
+          });
+    ```
+    </Tab>
+</Tabs>
