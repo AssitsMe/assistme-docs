@@ -4,5 +4,6 @@
   "facebook": "Facebook",
   "twilio": "Twilio SMS",
   "whatsapp": "WhatsApp",
+  "email": "Email",
   "api": "API"
 }
