@@ -61,7 +61,7 @@ export default async function handler(request: NextRequest) {
           >
             <img width="50" height="50" src={imageData} />
             <span style={{ fontWeight: 800 }}>
-              AssistMe
+              Varex
               <span style={{ marginLeft: 10, fontWeight: 400 }}>
                 – Open source analytics for LLM Apps
               </span>
