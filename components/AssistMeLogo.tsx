@@ -44,7 +44,7 @@ export const AssistMeLogo = ({
           size === "sm" ? "ml-2 text-sm" : "ml-3 text-xl",
         )}
       >
-        AssistMe
+        Varex
       </span>
     </div>
   )

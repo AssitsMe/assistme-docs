@@ -10,7 +10,7 @@ A variety of scores may be utilized, with the most common metrics assessing aspe
 
 In instances where the score pertains to a specific phase of a trace, for example, a singular LLM call, a message in a chat conversation, or a step in an agent, it is possible to attach the score directly to the observation. This enables targeted evaluation of that particular component.
 
-The `Score` object in AssistMe:
+The `Score` object in Varex:
 
 | Attribute       | Type   | Description                                                                                  |
 | --------------- | ------ | -------------------------------------------------------------------------------------------- |
@@ -22,7 +22,7 @@ The `Score` object in AssistMe:
 
 ## Kinds of scores
 
-Scores in AssistMe are adaptable and designed to cater to the unique requirements of specific LLM applications. They typically serve to measure the following aspects:
+Scores in Varex are adaptable and designed to cater to the unique requirements of specific LLM applications. They typically serve to measure the following aspects:
 
 - Quality
   - Factual accuracy
@@ -40,7 +40,7 @@ This flexible scoring system allows for a comprehensive evaluation of various el
 
 ## Ingesting scores
 
-Most users of AssistMe ingest scores programmatically. These are common sources of scores:
+Most users of Varex ingest scores programmatically. These are common sources of scores:
 
 | Source                                                   | examples                                                                                                                                                    |
 | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -48,9 +48,9 @@ Most users of AssistMe ingest scores programmatically. These are common sources 
 | [User feedback](/docs/scores/user-feedback)              | Explicit (e.g., thumbs up/down, 1-5 star rating) or implicit (e.g., time spent on a page, click-through rate, accepting/rejecting a model-generated output) |
 
 
-## Using scores across AssistMe
+## Using scores across Varex
 
-Scores can be used in multiple ways across AssistMe:
+Scores can be used in multiple ways across Varex:
 
 1. Displayed on trace to provide a quick overview
 2. Segment all execution traces by scores to e.g. find all traces with a low quality score

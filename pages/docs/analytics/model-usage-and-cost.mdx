@@ -1,11 +1,11 @@
 ---
 description: >-
-  AssistMe tracks usage and cost of LLM generations for various models (incl OpenAI, Anthropic, Google, and more). Add your own model definitions to track any model or custom pricing.
+  Varex tracks usage and cost of LLM generations for various models (incl OpenAI, Anthropic, Google, and more). Add your own model definitions to track any model or custom pricing.
 ---
 
 # Model Usage & Cost
 
-Across AssistMe, usage and cost are tracked for LLM generations:
+Across Varex, usage and cost are tracked for LLM generations:
 
 - **Usage**: token/character counts
 - **Cost**: USD cost of the generation
@@ -13,7 +13,7 @@ Across AssistMe, usage and cost are tracked for LLM generations:
 Both usage and cost can be either
 
 - [**ingested**](#ingest) via API or integrations
-- or [**inferred**](#infer) based on the `model` parameter of the generation. AssistMe comes with a list of predefined popular models and their tokenizers including OpenAI, Anthropic, and Google models.
+- or [**inferred**](#infer) based on the `model` parameter of the generation. Varex comes with a list of predefined popular models and their tokenizers including OpenAI, Anthropic, and Google models.
 
 Ingested usage and cost are prioritized over inferred usage and cost:
 
@@ -33,7 +33,7 @@ flowchart LR
 
 ## Ingest usage and/or cost [#ingest]
 
-If available in the LLM response, ingesting usage and/or cost is the most accurate and robust way to track usage in AssistMe:
+If available in the LLM response, ingesting usage and/or cost is the most accurate and robust way to track usage in Varex:
 
 <Tabs items={["API"]}>
   <Tab>
@@ -62,7 +62,7 @@ If available in the LLM response, ingesting usage and/or cost is the most accura
 
 ### Usage
 
-If a tokenizer is specified for the model, AssistMe automatically calculates token amounts for ingested generations.
+If a tokenizer is specified for the model, Varex automatically calculates token amounts for ingested generations.
 
 The following tokenizers are currently supported:
 
@@ -75,8 +75,8 @@ The following tokenizers are currently supported:
 
 Model definitions include prices per unit (input, output, total).
 
-AssistMe automatically calculates cost for ingested generations if (1) usage is ingested or inferred, (2) and a matching model definition includes prices.
+Varex automatically calculates cost for ingested generations if (1) usage is ingested or inferred, (2) and a matching model definition includes prices.
 
 ## Troubleshooting
 
-**Usage and cost are missing for historical generations**. Except for changes in prices, AssistMe does not retroactively infer usage and cost for existing generations when model definitions are changed. You can request a batch job to apply new model definitions to existing generations.
+**Usage and cost are missing for historical generations**. Except for changes in prices, Varex does not retroactively infer usage and cost for existing generations when model definitions are changed. You can request a batch job to apply new model definitions to existing generations.
