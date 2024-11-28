@@ -4,7 +4,7 @@ description: Track conversations or threads across multiple traces in a single s
 
 # Sessions
 
-Many interactions with LLM applications span multiple traces. `Sessions` in AssistMe are a way to group these traces together and see a simple **session replay** of the entire interaction. Get started by adding a `sessionId` when creating a trace.
+Many interactions with LLM applications span multiple traces. `Sessions` in Varex are a way to group these traces together and see a simple **session replay** of the entire interaction. Get started by adding a `sessionId` when creating a trace.
 
 {/* _Example session spanning multiple traces_
 
@@ -25,10 +25,10 @@ Add a `sessionId` when creating/updating a trace. This can be any string that yo
   <Tab>
  
   ```bash
-  curl --location 'http://staging.assistme.chat/api/v1/traces' \
+  curl --location 'http://cloud.varex.ai/api/v1/traces' \
   --header 'Content-Type: application/json' \
   --header 'Accept: application/json' \
-  --header "Authorization: Bearer {AssistMe_public_key}"
+  --header "Authorization: Bearer {Varex_public_key}"
   --data '{
     "traceId": "<string>",
     "name": "<string>",
@@ -47,4 +47,4 @@ Add a `sessionId` when creating/updating a trace. This can be any string that yo
 ## Other features
 
 - Bookmark a session to easily find it later
-- Manually evaluate sessions by adding `scores` from the AssistMe UI
+- Manually evaluate sessions by adding `scores` from the Varex UI
