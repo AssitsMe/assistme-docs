@@ -25,10 +25,10 @@ Add a `sessionId` when creating/updating a trace. This can be any string that yo
   <Tab>
  
   ```bash
-  curl --location 'http://staging.assistme.chat/api/v1/traces' \
+  curl --location 'http://cloud.varex.ai/api/v1/traces' \
   --header 'Content-Type: application/json' \
   --header 'Accept: application/json' \
-  --header "Authorization: Bearer {AssistMe_public_key}"
+  --header "Authorization: Bearer {Varex_public_key}"
   --data '{
     "traceId": "<string>",
     "name": "<string>",
