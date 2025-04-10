@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: 'https://assistme.chat',
+    siteUrl: 'https://www.varex.ai',
     generateRobotsTxt: true,
     changefreq: 'daily',
     additionalPaths: async (config) => [{

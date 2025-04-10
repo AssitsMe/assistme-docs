@@ -11,7 +11,7 @@ const features = [
   {
     name: "Quality.",
     description:
-      "Add scores to each trace. Can be model-based evaluation, user feedback, or manual labeling in the AssistMe UI.",
+      "Add scores to each trace. Can be model-based evaluation, user feedback, or manual labeling in the Varex UI.",
     icon: Check,
   },
   {
@@ -29,7 +29,7 @@ const features = [
   {
     name: "Public API.",
     description:
-      "All data is also accessible via the public API to build your own custom features and dashboards on top of AssistMe.",
+      "All data is also accessible via the public API to build your own custom features and dashboards on top of Varex.",
     icon: Check,
   },
 ];
@@ -53,7 +53,7 @@ export const FeatAnalytics = () => (
               Prebuilt dashboards
             </p>
             <p className="mt-6 text-lg leading-8 text-primary/70">
-              Based on the ingested data, AssistMe provides prebuilt analytics
+              Based on the ingested data, Varex provides prebuilt analytics
               to help teams focus on the most important metrics accessible to
               the whole team.
             </p>

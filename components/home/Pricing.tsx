@@ -225,29 +225,29 @@ export const Pricing: React.FC<{ includeFaq?: boolean }> = ({
 
 const faqs = [
   {
-    question: "What is the easiest way to try AssistMe?",
+    question: "What is the easiest way to try Varex?",
     answer:
-      "You can view the <a class='underline' href='/demo'>public demo project</a> or sign up for a <a class='underline' href='https://cloud.AssistMe.com'>free account</a> to try AssistMe with your own data. The Hobby plan is completeley free and does not require a credit card.",
+      "You can view the <a class='underline' href='/demo'>public demo project</a> or sign up for a <a class='underline' href='https://cloud.AssistMe.com'>free account</a> to try Varex with your own data. The Hobby plan is completeley free and does not require a credit card.",
   },
   {
     question: "What is an observation?",
     answer:
-      "Traces in AssistMe include a set of observations. An observation is a single event that occurred in your system. For example, a single LLM call, a single HTTP request, a single log object, or a database query. Check out the <a class='underline' href='/docs/tracing'>AssistMe Tracing docs<a/> for more details.",
+      "Traces in Varex include a set of observations. An observation is a single event that occurred in your system. For example, a single LLM call, a single HTTP request, a single log object, or a database query. Check out the <a class='underline' href='/docs/tracing'>Varex Tracing docs<a/> for more details.",
   },
   {
-    question: "Do I need to use AssistMe Cloud?",
+    question: "Do I need to use Varex Cloud?",
     answer:
-      "No, AssistMe Cloud is the managed service offered by the AssistMe team. AssistMe is open source and you can run AssistMe <a class='underline' href='/docs/deployment/local'>locally using docker compose<a/> or for <a class='underline' href='/docs/deployment/self-host'>production use via docker<a/> and a standalone database.",
+      "No, Varex Cloud is the managed service offered by the Varex team. Varex is open source and you can run Varex <a class='underline' href='/docs/deployment/local'>locally using docker compose<a/> or for <a class='underline' href='/docs/deployment/self-host'>production use via docker<a/> and a standalone database.",
   },
   {
     question: "Where is the data stored?",
     answer:
-      "AssistMe Cloud is hosted on AWS and data is stored in the US or EU depending on your selection. See our <a class='underline' href='/docs/data-security-privacy'>security and privacy documentation</a> for more details.",
+      "Varex Cloud is hosted on AWS and data is stored in the US or EU depending on your selection. See our <a class='underline' href='/docs/data-security-privacy'>security and privacy documentation</a> for more details.",
   },
   {
     question: "What are the limitations of the fair use policy?",
     answer:
-      "The fair use policy is designed to be generous. By default, we limit API usage at 1k requests per minute to prevent abuse. Since requests are batched via the AssistMe client SDKs and the/v1/public/ingestion endpoint, this limit is unlikely to be reached by most customers. If you need to increase this limit, please contact us.",
+      "The fair use policy is designed to be generous. By default, we limit API usage at 1k requests per minute to prevent abuse. Since requests are batched via the Varex client SDKs and the/v1/public/ingestion endpoint, this limit is unlikely to be reached by most customers. If you need to increase this limit, please contact us.",
   },
 ];
 

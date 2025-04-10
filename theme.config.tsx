@@ -178,12 +178,12 @@ const config: DocsThemeConfig = {
     return {
       titleTemplate:
         asPath === "/"
-          ? "AssistMe"
+          ? "VarexAI"
           : asPath.startsWith("/blog/")
-            ? "%s - AssistMe Blog"
+            ? "%s - VarexAI Blog"
             : asPath.startsWith("/docs/guides/")
-              ? "%s - AssistMe Guides"
-              : "%s - AssistMe",
+              ? "%s - VarexAI Guides"
+              : "%s - VarexAI",
     };
   },
   head: () => {
