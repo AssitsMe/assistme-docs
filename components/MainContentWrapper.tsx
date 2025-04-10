@@ -19,58 +19,62 @@ const pathsWithoutFooterWidgets = ["/imprint", "/blog"];
 
 export const SidebarChecker = () => {
   useEffect(() => {
-    let element = document.querySelector('.nextra-sidebar-container');
-    element.className = 'hidden';
-    let carousel = document.querySelectorAll('.nx-mb-8.nx-flex.nx-items-center.nx-border-t');
-    carousel[0].className = 'hidden';
-  }, [])
-  return (<></>);
-}
-
+    let element = document.querySelector(".nextra-sidebar-container");
+    element.className = "hidden";
+    let carousel = document.querySelectorAll(
+      ".nx-mb-8.nx-flex.nx-items-center.nx-border-t"
+    );
+    carousel[0].className = "hidden";
+  }, []);
+  return <></>;
+};
 
 export const ThemeDark = () => {
   useEffect(() => {
-    let html = document.querySelector('html');
-    html.className = 'dark';
-  }, [])
-  return (<></>);
-}
+    let html = document.querySelector("html");
+    html.className = "dark";
+  }, []);
+  return <></>;
+};
 
-export const ThemeLight= () => {
+export const ThemeLight = () => {
   useEffect(() => {
-    let elements = document.querySelectorAll('.dark');
-    elements.forEach(function(elem) {
-      elem.classList.remove('dark');
-    })
-  }, [])
-  return (<></>);
-}
+    let elements = document.querySelectorAll(".dark");
+    elements.forEach(function (elem) {
+      elem.classList.remove("dark");
+    });
+  }, []);
+  return <></>;
+};
 
 export const MainContentWrapper = (props) => {
   const [visible, setVisible] = useState(true);
   const router = useRouter();
   const params = useSearchParams();
-  const sidebarVisible = params.get('sidebarVisible');
-  const feedbackVisible = params.get('feedbackVisible');
-  const theme = params.get('theme');
-
+  const sidebarVisible = params.get("sidebarVisible");
+  const feedbackVisible = params.get("feedbackVisible");
+  const theme = params.get("theme");
 
   return (
     <>
-      {sidebarVisible === 'false' ? <SidebarChecker /> : ''}
-      {theme === 'dark' ? <ThemeDark /> : ''}
-      {theme === 'light' ? <ThemeLight /> : ''}
+      {sidebarVisible === "false" ? <SidebarChecker /> : ""}
+      {theme === "dark" ? <ThemeDark /> : ""}
+      {theme === "light" ? <ThemeLight /> : ""}
       {props.children}
       {!pathsWithoutFooterWidgets.includes(router.pathname) ? (
         <div
           className="flex flex-col gap-10 pt-14 border-t dark:border-neutral-800 mb-20"
           id="docs-feedback"
         >
-          {feedbackVisible === "false" ?
-            <></> : <>
+          {feedbackVisible === "false" ? (
+            <></>
+          ) : (
+            <>
               <DocsFeedback key={router.pathname} />
               <DocsSupport />
-              <DocsSubscribeToUpdates /></>}
+              <DocsSubscribeToUpdates />
+            </>
+          )}
         </div>
       ) : null}
       <Background />
@@ -171,10 +175,10 @@ export const DocsFeedback = () => {
         {selected === null
           ? "Was this page useful?"
           : selected === "positive"
-            ? "What was most useful?"
-            : selected === "negative"
-              ? "What can we improve?"
-              : "Thanks for your feedback!"}
+          ? "What was most useful?"
+          : selected === "negative"
+          ? "What can we improve?"
+          : "Thanks for your feedback!"}
       </h3>
       {selected === null ? (
         <div className="flex flex-wrap gap-3">
